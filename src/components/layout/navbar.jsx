@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Admin from '../../assets/admin.jpg'
 const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-sm navbar-light bg-white">
@@ -23,8 +23,10 @@ const Navbar = () => {
                                 id="navbarDropdown"
                                 data-toggle="dropdown"
                             >
-                                Admin
-                  <span className="ml-2 navbar-text">Subroto Biswas</span>
+
+                                <img src={Admin} height='30px' width='30px' alt='admin' />
+
+                                <span className="ml-2 navbar-text">test test</span>
                             </a>
                             <div className="dropdown-menu">
                                 <a className="dropdown-item" href="!#">

@@ -3,11 +3,6 @@ $theme-colors: (
 );
 
 $body-bg: gray;
-$card-border-width: 0;
 $font-family-base: "Open Sans";
-
-.card {
-  position: relative;
-}
 
 @import "~bootstrap/scss/bootstrap.scss";
