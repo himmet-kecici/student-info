@@ -2,7 +2,7 @@ import React from 'react'
 import Admin from '../../assets/admin.jpg'
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-sm navbar-light bg-white">
+        <nav className="navbar navbar-expand-sm navbar-light" style={{ 'backgroundColor': '#BFCAD0' }}>
             <div className="container ">
                 <a className="navbar-brand" href="/">
                     Student Info
@@ -11,8 +11,8 @@ const Navbar = () => {
                 <div>
                     <ul className="navbar-nav mr-auto"></ul>
                     <ul className="navbar-nav align-items-center">
-                        <li className="nav-item">
-                            <a href="#!" className="btn btn-primary py-1 mr-5">
+                        <li className="nav-item" >
+                            <a href="#!" className="btn py-1 mr-5 btn-navbar" >
                                 Add Student
                 </a>
                         </li>

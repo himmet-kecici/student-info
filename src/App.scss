@@ -1,3 +1,29 @@
 .navbar {
   box-shadow: 0px 7px 40px rgba(#000, 0.1);
+  .btn-navbar {
+    color: white;
+    background-color: #8b4a4c;
+    &:hover {
+      color: white;
+      background-color: #970c10;
+    }
+  }
+}
+
+.btn-profile {
+  color: white;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #8b4a4c;
+  &:hover {
+    color: white;
+    background-color: #970c10;
+  }
+}
+
+.btn-edit {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
