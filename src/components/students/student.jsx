@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, useParams } from 'react-router-dom'
+import Avatar from '../layout/avatar';
 
 const Student = () => {
     const { id } = useParams();
@@ -11,18 +12,19 @@ const Student = () => {
                         <div className="card card-body shadow">
                             <div className="row">
                                 <div className="col-md-4">
-                                    profile pic.
-            </div>
+                                    <Avatar url={`https://i.pravatar.cc/150?img=${id}`} />
+                                </div>
                                 <div className="col-md-8">
                                     <ul className="list-group">
                                         <li
                                             className="d-flex justify-content-between align-items-center list-group-item list-group-item-action"
                                         >
                                             <h3 className="m-0">STUDENT NAME</h3>
-                                            <Link className="btn btn-primary btn-edit2" to={`/studentForm/${id}`}>
+                                            <Link className="btn  btn-general" to={`/studentForm/${id}`}>
                                                 edit profile
                   </Link>
                                         </li>
+
                                         <li className="list-group-item">
                                             <p>email: STUDENT_EMAIL</p>
                                             <p>phone: STUDENT_PHONE</p>

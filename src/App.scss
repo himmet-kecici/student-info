@@ -8,13 +8,12 @@
       background-color: #970c10;
     }
   }
+  .dropdown-toggle::after {
+    color: #8b4a4c;
+  }
 }
-
-.btn-profile {
+.btn-general {
   color: white;
-  position: absolute;
-  left: 0;
-  bottom: 0;
   background-color: #8b4a4c;
   &:hover {
     color: white;
@@ -22,12 +21,14 @@
   }
 }
 
+.btn-profile {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
 .btn-edit {
   position: absolute;
   right: 0;
   top: 0;
-}
-
-.btn-edit2{
-  background-color:black;
 }

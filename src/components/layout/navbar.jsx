@@ -1,5 +1,6 @@
 import React from 'react'
 import Admin from '../../assets/admin.jpg'
+import { Link } from 'react-router-dom'
 const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-sm navbar-light" style={{ 'backgroundColor': '#BFCAD0' }}>
@@ -12,11 +13,11 @@ const Navbar = () => {
                     <ul className="navbar-nav mr-auto"></ul>
                     <ul className="navbar-nav align-items-center">
                         <li className="nav-item" >
-                            <a href="#!" className="btn py-1 mr-5 btn-navbar" >
+                            <Link to="/studentForm" className="btn py-1 mr-5 btn-navbar" >
                                 Add Student
-                </a>
+                </Link>
                         </li>
-                        <li className="nav-item dropdown">
+                        <li className="nav-item dropdown" >
                             <a
                                 className="nav-a dropdown-toggle"
                                 href="!#"
