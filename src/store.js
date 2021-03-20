@@ -11,15 +11,14 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import { createFirestoreInstance, firestoreReducer } from 'redux-firestore'
 
 const fbConfig = {
-    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+    apiKey: process.env.REACT_APP_FB_API_KEY,
     authDomain: "student-info-f4698.firebaseapp.com",
     projectId: "student-info-f4698",
     storageBucket: "student-info-f4698.appspot.com",
-    messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
-    appId: process.env.REACT_APP_APPID,
-    measurementId: process.env.REACT_APP_MESUREMENTID
+    messagingSenderId: process.env.REACT_APP_FB_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_FB_APP_ID,
+    measurementId: process.env.REACT_APP_FB_MEASUREMENT_ID
 }
-
 
 const rrfConfig = {
     userProfile: 'users',
