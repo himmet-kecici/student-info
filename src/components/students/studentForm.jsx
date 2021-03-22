@@ -1,8 +1,14 @@
-import React, { useState } from 'react'
-import { useParams } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { useParams, useHistory } from 'react-router-dom'
 import Input from '../layout/input'
+import { useFirestore } from 'react-redux-firebase'
+
+
 const StudentForm = () => {
+    const history = useHistory()
+    const firestore = useFirestore()
     const { id } = useParams()
+    const docRef = id ? firestore.collection('students').doc(id) : null
     const [student, setStudent] = useState({
         name: '',
         email: '',
@@ -23,13 +29,33 @@ const StudentForm = () => {
 
     }
 
-    const submitForm = e => {
+    useEffect(() => {
+        if (id) {
+            loadStudent()
+        }
+    }, [id])
+
+    const loadStudent = async () => {
+        try {
+            const result = await docRef.get()
+            if (result.exists) {
+                setStudent(result.data())
+            } else {
+                console.log('no student info!')
+            }
+        } catch (error) {
+            console.log('error: ', error)
+        }
+    }
+
+    const submitForm = async e => {
         e.preventDefault();
         if (id) {
-            alert('saddsaf')
+            await docRef.update({ ...student, updatedAt: firestore.FieldValue.serverTimestamp() })
         } else {
-            alert('s;f')
+            firestore.collection('students').add({ ...student, createdAt: firestore.FieldValue.serverTimestamp() })
         }
+        history.push('/')
     }
 
     return (
