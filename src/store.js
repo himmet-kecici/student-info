@@ -3,12 +3,10 @@ import 'firebase/auth'
 import 'firebase/firestore'
 // import 'firebase/functions' // <- needed if using httpsCallable
 import { createStore, combineReducers, compose } from 'redux'
-import {
-    ReactReduxFirebaseProvider,
-    firebaseReducer
-} from 'react-redux-firebase'
+import { ReactReduxFirebaseProvider, firebaseReducer } from 'react-redux-firebase'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import { createFirestoreInstance, firestoreReducer } from 'redux-firestore'
+
 
 const fbConfig = {
     apiKey: process.env.REACT_APP_FB_API_KEY,
