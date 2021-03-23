@@ -1,7 +1,10 @@
 import React from 'react'
 import Admin from '../../assets/admin.jpg'
 import { Link } from 'react-router-dom'
+import { useFirebase } from 'react-redux-firebase'
+
 const Navbar = () => {
+    const firebase = useFirebase()
     return (
         <nav className="navbar navbar-expand-sm navbar-light" style={{ 'backgroundColor': '#BFCAD0' }}>
             <div className="container ">
@@ -33,7 +36,7 @@ const Navbar = () => {
                                 <a className="dropdown-item" href="!#">
                                     Profile
                   </a>
-                                <a className="dropdown-item" href="!#">
+                                <a className="dropdown-item" href="!#" onClick={() => firebase.logout()}>
                                     Logout
                   </a>
                                 <div className="dropdown-divider"></div>

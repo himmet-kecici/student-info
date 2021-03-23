@@ -7,6 +7,7 @@ import StudentForm from './components/students/studentForm';
 import { Provider } from 'react-redux'
 import store, { rrfProps } from './store'
 import { ReactReduxFirebaseProvider } from 'react-redux-firebase'
+import Login from './components/pages/login';
 function App() {
   return (
     <Provider store={store}>
@@ -18,6 +19,7 @@ function App() {
               <Route exact path='/' component={Students} />
               <Route exact path='/student/:id' component={Student} />
               <Route exact path='/studentForm/:id?' component={StudentForm} />
+              <Route exact path='/login' component={Login} />
             </Switch>
           </div>
         </BrowserRouter>
