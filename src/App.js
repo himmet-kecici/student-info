@@ -8,13 +8,15 @@ import { Provider } from 'react-redux'
 import store, { rrfProps } from './store'
 import { ReactReduxFirebaseProvider } from 'react-redux-firebase'
 import Login from './components/pages/login';
+import PrivateRoute from './components/routes/privateRoute';
 function App() {
   return (
     <Provider store={store}>
       <ReactReduxFirebaseProvider {...rrfProps}>
         <BrowserRouter>
           <div className="App">
-            <Navbar />
+            <PrivateRoute component={Navbar} />
+
             <Switch>
               <Route exact path='/' component={Students} />
               <Route exact path='/student/:id' component={Student} />

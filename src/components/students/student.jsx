@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import Avatar from '../layout/avatar';
 import { useFirestore } from 'react-redux-firebase'
+import Loading from '../layout/loading';
 const Student = () => {
     const firestore = useFirestore()
     const { id } = useParams();
@@ -26,7 +27,7 @@ const Student = () => {
     }, [])
 
     if (!student) {
-        return <h1>loading...</h1>
+        return <Loading />
     }
 
     return (

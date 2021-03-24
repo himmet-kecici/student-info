@@ -38,7 +38,7 @@ const Login = () => {
                                     <div className="form-group">
                                         <Input
                                             name="email"
-                                            placeholder="Enter Your E-mail"
+                                            placeholder="kecicihimmet@gmail.com"
                                             value={user.email}
                                             onChange={onInputChange} />
                                     </div>
@@ -46,7 +46,7 @@ const Login = () => {
                                         <Input
                                             type="password"
                                             name="password"
-                                            placeholder="Enter Your Password"
+                                            placeholder="123456"
                                             value={user.password}
                                             onChange={onInputChange}
                                         />

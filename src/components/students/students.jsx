@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Avatar from '../layout/avatar'
 import { useFirestoreConnect, useFirestore } from "react-redux-firebase";
 import { useSelector } from 'react-redux'
+import Loading from '../layout/loading';
 
 const Students = () => {
     const firestore = useFirestore()
@@ -10,12 +11,13 @@ const Students = () => {
     console.log(students)
     useFirestoreConnect([
         {
-            collection: 'students'
+            collection: 'students',
+            orderBy: ['createdAt', 'desc']
         }
     ])
 
     if (!students) {
-        return <h1>loading...</h1>
+        return <Loading />
     }
 
     const deleteStudent = async id => {
