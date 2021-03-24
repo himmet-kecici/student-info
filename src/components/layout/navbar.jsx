@@ -8,9 +8,9 @@ const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-sm navbar-light" style={{ 'backgroundColor': '#BFCAD0' }}>
             <div className="container ">
-                <a className="navbar-brand" href="/">
+                <Link className="navbar-brand" to="/">
                     Student Info
-          </a>
+          </Link>
 
                 <div>
                     <ul className="navbar-nav mr-auto"></ul>
