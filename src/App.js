@@ -13,7 +13,7 @@ function App() {
   return (
     <Provider store={store}>
       <ReactReduxFirebaseProvider {...rrfProps}>
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <BrowserRouter basename="/student-info">
           <div className="App">
             <PrivateRoute component={Navbar} />
 
